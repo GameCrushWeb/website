@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - GameCrush.com</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <a href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
+            <ul class="navigation">
+                <li id="link1">
+                    <a href="index.html">Home</a>
+                </li>
+                <li id="link2">
+                    <a href="about.html">About</a>
+                </li>
+                <li id="link3">
+                    <a href="ourgames.html">Our Games</a>
+                </li>
+                <li id="link4">
+                    <a href="carrer.html">Carrer</a>
+                </li>
+                <li id="link5" class="selected">
+                    <a href="contactus.html">Contact Us</a>
+            </ul>
+        </div>
+        <div class="body">
+            <div class="contactus">
+                <div>
+                    <h2 style="font-size: 40px;">Get in Touch</h2>
+                    <h5>Office Address</h5>
+                    <p>
+                        F-710,<br>Titanium City Center,<br>100ft. Road,<br>Ahmedabad - 380015
+                    </p>
+                    <h5>Contact Number</h5>
+                    <p>
+                        Phone: +91-9327475256
+                    </p>
+                    <h5>E-mail Address</h5>
+                    <p>
+                        <a>wecare.gamecrush@gmail.com</a>
+                    </p>
+                </div>
+                <div class="container">
+                    <h3>Say Hello!</h3>
+                    <h4>Let us know more about you!</h4>
+                    <form action="thankyou.html" method="post" onsubmit="return ValidateForm(this);">
+                        <script type="text/javascript">
+                            function ValidateForm(frm) {
+                                if (frm.firstname.value == "") {
+                                    alert('Firstname is required.');
+                                    frm.firstname.focus();
+                                    return false;
+                                }
+                                if (frm.lastname.value == "") {
+                                    alert('Lastname is required.');
+                                    frm.lastname.focus();
+                                    return false;
+                                }
+                                if (frm.emailid.value == "") {
+                                    alert('Email address is required.');
+                                    frm.emailid.focus();
+                                    return false;
+                                }
+                                if (frm.emailid.value.indexOf("@") < 1 || frm.emailid.value.indexOf(".") < 1) {
+                                    alert('Please enter a valid email address.');
+                                    frm.emailid.focus();
+                                    return false;
+                                }
+                                if (frm.Comments.value == "") {
+                                    alert('Please enter message or questions.');
+                                    frm.Comments.focus();
+                                    return false;
+                                }
+                                return true;
+                            }
+                        </script>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="lname">Email Id</label>
+                        <input type="text" id="email" name="emailid" placeholder="Your email address..">
+
+                        <label for="subject">Message</label>
+                        <textarea id="subject" name="Comments" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="connect">
+                <h1>
+                    <a href="index.html" style="color: white;text-decoration: none;">Home |</a>
+                    <a href="about.html" style="color: white;text-decoration: none;">About |</a>
+                    <a href="ourgames.html" style="color: white;text-decoration: none;">Our Games |</a>
+                    <a href="carrer.html" style="color: white;text-decoration: none;">Carrer |</a>
+                    <a href="contactus.html" style="color: white;text-decoration: none;">Contact Us</a>
+                </h1>
+            </div>
+            <p>
+                Copyright &#169;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> GameCrush. All Rights Reserved.
+            </p>
+            <ul>
+                <li>
+                    <a href="privacypolicy.html">| Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
