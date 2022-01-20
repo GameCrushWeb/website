@@ -93,7 +93,7 @@
                 <div class="container">
                     <h3>Say Hello!</h3>
                     <h4>Let us know more about you!</h4>
-                    <form onsubmit="return ValidateForm(this);">
+                    <form action="thankyou.html" method="post" onsubmit="return ValidateForm(this);">
                         <script type="text/javascript">
                             function ValidateForm(frm) {
                                 if (frm.firstname.value == "") {
@@ -136,8 +136,7 @@
                         <label for="subject">Message</label>
                         <textarea id="subject" name="Comments" placeholder="Write something.." style="height:200px"></textarea>
 
-                        <a href="thankyou.html" style="color: white;text-decoration: none;"><input type="submit" value="Submit"> |</a>
-                        
+                        <input type="submit" value="Submit">
                     </form>
                 </div>
             </div>
